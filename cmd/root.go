@@ -77,6 +77,8 @@ func providerImporterSubcommands() []func(options ImportOptions) *cobra.Command 
 		newCmdXenorchestraImporter,
 		newCmdGmailfilterImporter,
 		newCmdVaultImporter,
+		// Harvester
+		newCmdHarvesterImporter,
 	}
 }
 
@@ -119,6 +121,8 @@ func providerGenerators() map[string]func() terraformutils.ProviderGenerator {
 		newXenorchestraProvider,
 		newGmailfilterProvider,
 		newVaultProvider,
+		// Harvester
+		newHarvesterProvider,
 	} {
 		list[providerGen().GetName()] = providerGen
 	}
