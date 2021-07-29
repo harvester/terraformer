@@ -22,7 +22,7 @@ func newCmdHarvesterImporter(options ImportOptions) *cobra.Command {
 		},
 	}
 	cmd.AddCommand(listCmd(newHarvesterProvider()))
-	baseProviderFlags(cmd.PersistentFlags(), &options, "image,virtualmachine", "ssh-user=ubuntu")
+	baseProviderFlags(cmd.PersistentFlags(), &options, "virtualmachine", "virtualmachine=id1:id2:id3, id format: namespace/name")
 
 	return cmd
 }
