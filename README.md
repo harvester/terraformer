@@ -36,6 +36,7 @@ A CLI tool that generates `tf`/`json` and `tfstate` files based on existing infr
         * [Vultr](/docs/vultr.md)
         * [Yandex.Cloud](/docs/yandex.md)
     * Infrastructure Software
+        * [Harvester](/docs/harvester.md)
         * [Kubernetes](/docs/kubernetes.md)
         * [OctopusDeploy](/docs/octopus.md)
         * [RabbitMQ](/docs/rabbitmq.md)
@@ -258,6 +259,7 @@ Links to download Terraform Providers:
     * Vultr provider >1.0.5 - [here](https://releases.hashicorp.com/terraform-provider-vultr/)
     * Yandex provider >0.42.0 - [here](https://releases.hashicorp.com/terraform-provider-yandex/)
 * Infrastructure Software
+    * Harvester provider >=0.1.0 - [here](https://github.com/harvester/terraform-provider-harvester)
     * Kubernetes provider >=1.9.0 - [here](https://releases.hashicorp.com/terraform-provider-kubernetes/)
     * RabbitMQ provider >=1.1.0 - [here](https://releases.hashicorp.com/terraform-provider-rabbitmq/)
 * Network
