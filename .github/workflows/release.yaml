@@ -19,7 +19,7 @@ jobs:
       - name: Test
         run: go build -v && go test ./...
       - name: Build for harvester
-        run: go run build/main.go harvester
+        run: go run build/main.go harvester && mv terraformer-harvester terraformer-harvester-linux-amd64
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
