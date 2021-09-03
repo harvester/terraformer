@@ -19,7 +19,7 @@ func (g *VolumeGenerator) InitResources() error {
 		return err
 	}
 
-	volumeList, err := client.HarvesterClient.CdiV1beta1().DataVolumes(namespace).List(context.Background(), metav1.ListOptions{})
+	volumeList, err := client.KubeClient.CoreV1().PersistentVolumeClaims(namespace).List(context.Background(), metav1.ListOptions{})
 	if err != nil {
 		return err
 	}

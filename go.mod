@@ -6,9 +6,9 @@ require (
 	cloud.google.com/go v0.77.0
 	cloud.google.com/go/logging v1.1.2
 	cloud.google.com/go/storage v1.14.0
-	github.com/Azure/azure-sdk-for-go v43.0.0+incompatible
+	github.com/Azure/azure-sdk-for-go v50.0.1-0.20210114072321-4a06a7dc9c3c+incompatible
 	github.com/Azure/azure-storage-blob-go v0.10.0
-	github.com/Azure/go-autorest/autorest v0.11.12
+	github.com/Azure/go-autorest/autorest v0.11.16
 	github.com/DataDog/datadog-api-client-go v1.0.0-beta.20
 	github.com/IBM-Cloud/bluemix-go v0.0.0-20210203095940-db28d5e07b55
 	github.com/IBM/go-sdk-core/v3 v3.3.1
@@ -113,8 +113,7 @@ require (
 	github.com/google/go-github/v35 v35.1.0
 	github.com/gophercloud/gophercloud v0.17.0
 	github.com/grafana/grafana-api-golang-client v0.0.0-20210218192924-9ccd2365d2a6
-
-	github.com/harvester/terraform-provider-harvester v0.1.0
+	github.com/harvester/terraform-provider-harvester v0.2.0
 	github.com/hashicorp/go-azure-helpers v0.10.0
 	github.com/hashicorp/go-cleanhttp v0.5.2
 	github.com/hashicorp/go-hclog v0.15.0
@@ -141,7 +140,7 @@ require (
 	github.com/paultyng/go-newrelic/v4 v4.10.0
 	github.com/pkg/errors v0.9.1
 	github.com/ryanuber/go-glob v1.0.0 // indirect
-	github.com/spf13/cobra v1.1.1
+	github.com/spf13/cobra v1.1.3
 	github.com/spf13/pflag v1.0.5
 	github.com/tencentcloud/tencentcloud-sdk-go v3.0.233+incompatible
 	github.com/tencentyun/cos-go-sdk-v5 v0.7.19
@@ -154,59 +153,60 @@ require (
 	golang.org/x/text v0.3.6
 	gonum.org/v1/gonum v0.7.0
 	google.golang.org/api v0.40.0
-	google.golang.org/genproto v0.0.0-20210226172003-ab064af71705
+	google.golang.org/genproto v0.0.0-20210315173758-2651cd453018
 	gopkg.in/jarcoal/httpmock.v1 v1.0.0-00010101000000-000000000000 // indirect
-	k8s.io/apimachinery v0.21.0
+	k8s.io/apimachinery v0.21.2
 	k8s.io/client-go v12.0.0+incompatible
 )
 
 replace (
 	github.com/Azure/azure-sdk-for-go => github.com/Azure/azure-sdk-for-go v42.3.0+incompatible
+
 	// start harvester
 	github.com/dgrijalva/jwt-go => github.com/dgrijalva/jwt-go v3.2.1-0.20200107013213-dc14462fd587+incompatible
 	github.com/docker/distribution => github.com/docker/distribution v0.0.0-20191216044856-a8371794149d
 	github.com/docker/docker => github.com/docker/docker v1.4.2-0.20200203170920-46ec8731fbce
 	github.com/go-kit/kit => github.com/go-kit/kit v0.3.0
 	github.com/googleapis/gnostic => github.com/googleapis/gnostic v0.4.1
-
-	github.com/harvester/harvester => github.com/harvester/harvester v0.0.2-0.20210621053253-abc91f0304f5
+	github.com/harvester/harvester => github.com/harvester/harvester v0.0.2-0.20210902062738-14ef2406f0fc
 
 	github.com/knative/pkg => github.com/rancher/pkg v0.0.0-20190514055449-b30ab9de040e
 	github.com/openshift/api => github.com/openshift/api v0.0.0-20191219222812-2987a591a72c
 	github.com/openshift/client-go => github.com/openshift/client-go v0.0.0-20200521150516-05eb9880269c
 	github.com/operator-framework/operator-lifecycle-manager => github.com/operator-framework/operator-lifecycle-manager v0.0.0-20190128024246-5eb7ae5bdb7a
-	github.com/rancher/rancher/pkg/apis => github.com/rancher/rancher/pkg/apis v0.0.0-20210304063736-65f7c844267b
-	github.com/rancher/rancher/pkg/client => github.com/rancher/rancher/pkg/client v0.0.0-20210304063736-65f7c844267b
+	github.com/rancher/rancher/pkg/apis => github.com/rancher/rancher/pkg/apis v0.0.0-20210702001641-82b212ddba18
+	github.com/rancher/rancher/pkg/client => github.com/rancher/rancher/pkg/client v0.0.0-20210702001641-82b212ddba18
+	github.com/spf13/afero => github.com/spf13/afero v1.2.2
 	gopkg.in/jarcoal/httpmock.v1 => github.com/jarcoal/httpmock v1.0.5
+	helm.sh/helm/v3 => github.com/rancher/helm/v3 v3.5.4-rancher.1
+	k8s.io/api => k8s.io/api v0.21.2
+	k8s.io/apiextensions-apiserver => k8s.io/apiextensions-apiserver v0.21.2
+	k8s.io/apimachinery => k8s.io/apimachinery v0.21.2
+	k8s.io/apiserver => k8s.io/apiserver v0.21.2
+	k8s.io/cli-runtime => k8s.io/cli-runtime v0.21.2
+	k8s.io/client-go => k8s.io/client-go v0.21.2
+	k8s.io/cloud-provider => k8s.io/cloud-provider v0.21.2
+	k8s.io/cluster-bootstrap => k8s.io/cluster-bootstrap v0.21.2
+	k8s.io/code-generator => k8s.io/code-generator v0.21.2
+	k8s.io/component-base => k8s.io/component-base v0.21.2
+	k8s.io/component-helpers => k8s.io/component-helpers v0.21.2
+	k8s.io/controller-manager => k8s.io/controller-manager v0.21.2
+	k8s.io/cri-api => k8s.io/cri-api v0.21.2
+	k8s.io/csi-translation-lib => k8s.io/csi-translation-lib v0.21.2
+	k8s.io/kube-aggregator => k8s.io/kube-aggregator v0.21.2
+	k8s.io/kube-controller-manager => k8s.io/kube-controller-manager v0.21.2
+	k8s.io/kube-proxy => k8s.io/kube-proxy v0.21.2
+	k8s.io/kube-scheduler => k8s.io/kube-scheduler v0.21.2
+	k8s.io/kubectl => k8s.io/kubectl v0.21.2
+	k8s.io/kubelet => k8s.io/kubelet v0.21.2
+	k8s.io/kubernetes => k8s.io/kubernetes v1.21.2
+	k8s.io/legacy-cloud-providers => k8s.io/legacy-cloud-providers v0.21.2
+	k8s.io/metrics => k8s.io/metrics v0.21.2
+	k8s.io/mount-utils => k8s.io/mount-utils v0.21.2
+	k8s.io/sample-apiserver => k8s.io/sample-apiserver v0.21.2
 
-	k8s.io/api => k8s.io/api v0.20.4
-	k8s.io/apiextensions-apiserver => k8s.io/apiextensions-apiserver v0.20.4
-	k8s.io/apimachinery => k8s.io/apimachinery v0.20.4
-	k8s.io/apiserver => k8s.io/apiserver v0.20.4
-	k8s.io/cli-runtime => k8s.io/cli-runtime v0.20.4
-	k8s.io/client-go => k8s.io/client-go v0.20.4
-	k8s.io/cloud-provider => k8s.io/cloud-provider v0.20.4
-	k8s.io/cluster-bootstrap => k8s.io/cluster-bootstrap v0.20.4
-	k8s.io/code-generator => k8s.io/code-generator v0.20.4
-	k8s.io/component-base => k8s.io/component-base v0.20.4
-	k8s.io/component-helpers => k8s.io/component-helpers v0.20.4
-	k8s.io/controller-manager => k8s.io/controller-manager v0.20.4
-	k8s.io/cri-api => k8s.io/cri-api v0.20.4
-	k8s.io/csi-translation-lib => k8s.io/csi-translation-lib v0.20.4
-	k8s.io/kube-aggregator => k8s.io/kube-aggregator v0.20.4
-	k8s.io/kube-controller-manager => k8s.io/kube-controller-manager v0.20.4
-	k8s.io/kube-proxy => k8s.io/kube-proxy v0.20.4
-	k8s.io/kube-scheduler => k8s.io/kube-scheduler v0.20.4
-	k8s.io/kubectl => k8s.io/kubectl v0.20.4
-	k8s.io/kubelet => k8s.io/kubelet v0.20.4
-	k8s.io/kubernetes => k8s.io/kubernetes v1.20.2
-	k8s.io/legacy-cloud-providers => k8s.io/legacy-cloud-providers v0.20.4
-	k8s.io/metrics => k8s.io/metrics v0.20.4
-	k8s.io/mount-utils => k8s.io/mount-utils v0.20.4
-	k8s.io/sample-apiserver => k8s.io/sample-apiserver v0.20.4
-
-	kubevirt.io/client-go => github.com/kubevirt/client-go v0.40.0
-	kubevirt.io/containerized-data-importer => github.com/rancher/kubevirt-containerized-data-importer v1.26.1-0.20210303063201-9e7a78643487
+	kubevirt.io/client-go => github.com/kubevirt/client-go v0.44.0
+	kubevirt.io/containerized-data-importer => github.com/rancher/kubevirt-containerized-data-importer v1.26.1-0.20210802100720-9bcf4e7ba0ce
 	sigs.k8s.io/structured-merge-diff => sigs.k8s.io/structured-merge-diff v0.0.0-20190302045857-e85c7b244fd2
 // end harvester
 )
