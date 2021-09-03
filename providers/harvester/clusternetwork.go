@@ -12,14 +12,12 @@ type ClusterNetworkGenerator struct {
 }
 
 func (g *ClusterNetworkGenerator) InitResources() error {
-	args := g.GetArgs()
-	namespace := args[optionNamespace].(string)
 	client, err := g.NewHarvesterClient()
 	if err != nil {
 		return err
 	}
 
-	clusterNetworkList, err := client.HarvesterNetworkClient.NetworkV1beta1().ClusterNetworks(namespace).List(context.Background(), metav1.ListOptions{})
+	clusterNetworkList, err := client.HarvesterNetworkClient.NetworkV1beta1().ClusterNetworks().List(context.Background(), metav1.ListOptions{})
 	if err != nil {
 		return err
 	}
