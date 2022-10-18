@@ -4,6 +4,7 @@ import (
 	"context"
 
 	"github.com/harvester/terraform-provider-harvester/pkg/importer"
+	"github.com/rancher/wrangler/pkg/slice"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
@@ -25,6 +26,10 @@ func (g *VolumeGenerator) InitResources() error {
 	}
 
 	for _, volume := range volumeList.Items {
+		if slice.ContainsString([]string{"cattle-monitoring-system"}, volume.Namespace) {
+			continue
+		}
+
 		stateGetter, err := importer.ResourceVolumeStateGetter(&volume)
 		if err != nil {
 			return nil
