@@ -30,7 +30,7 @@ func (g *VirtualMachineGenerator) InitResources() error {
 		if err != nil && !apierrors.IsNotFound(err) {
 			return err
 		}
-		stateGetter, err := importer.ResourceVirtualMachineStateGetter(&vm, vmi)
+		stateGetter, err := importer.ResourceVirtualMachineStateGetter(&vm, vmi, "")
 		if err != nil {
 			return nil
 		}

@@ -3,6 +3,7 @@ package harvester
 import (
 	"context"
 
+	"github.com/harvester/terraform-provider-harvester/pkg/constants"
 	"github.com/harvester/terraform-provider-harvester/pkg/importer"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
@@ -23,6 +24,10 @@ func (g *ClusterNetworkGenerator) InitResources() error {
 	}
 
 	for _, clusterNetwork := range clusterNetworkList.Items {
+		if clusterNetwork.Name == constants.ManagementClusterNetworkName {
+			continue
+		}
+
 		stateGetter, err := importer.ResourceClusterNetworkStateGetter(&clusterNetwork)
 		if err != nil {
 			return nil
