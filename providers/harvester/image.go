@@ -27,7 +27,7 @@ func (g *ImageGenerator) InitResources() error {
 	for _, image := range imageList.Items {
 		stateGetter, err := importer.ResourceImageStateGetter(&image)
 		if err != nil {
-			return nil
+			return err
 		}
 
 		g.Resources = append(g.Resources, buildResourceFormStateGetter(g.GetProviderName(), stateGetter))

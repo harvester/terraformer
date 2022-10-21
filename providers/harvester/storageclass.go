@@ -30,7 +30,7 @@ func (g *StorageClassGenerator) InitResources() error {
 
 		stateGetter, err := importer.ResourceStorageClassStateGetter(&storageClass)
 		if err != nil {
-			return nil
+			return err
 		}
 
 		g.Resources = append(g.Resources, buildResourceFormStateGetter(g.GetProviderName(), stateGetter))

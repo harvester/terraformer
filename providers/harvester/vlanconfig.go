@@ -25,7 +25,7 @@ func (g *VLANConfigGenerator) InitResources() error {
 	for _, vlanConfig := range vlanConfigList.Items {
 		stateGetter, err := importer.ResourceVLANConfigStateGetter(&vlanConfig)
 		if err != nil {
-			return nil
+			return err
 		}
 
 		g.Resources = append(g.Resources, buildResourceFormStateGetter(g.GetProviderName(), stateGetter))

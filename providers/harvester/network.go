@@ -27,7 +27,7 @@ func (g *NetworkGenerator) InitResources() error {
 	for _, network := range networkList.Items {
 		stateGetter, err := importer.ResourceNetworkStateGetter(&network)
 		if err != nil {
-			return nil
+			return err
 		}
 
 		g.Resources = append(g.Resources, buildResourceFormStateGetter(g.GetProviderName(), stateGetter))
