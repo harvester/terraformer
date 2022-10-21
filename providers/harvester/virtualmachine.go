@@ -32,7 +32,7 @@ func (g *VirtualMachineGenerator) InitResources() error {
 		}
 		stateGetter, err := importer.ResourceVirtualMachineStateGetter(&vm, vmi, "")
 		if err != nil {
-			return nil
+			return err
 		}
 
 		g.Resources = append(g.Resources, buildResourceFormStateGetter(g.GetProviderName(), stateGetter))

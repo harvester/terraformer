@@ -27,7 +27,7 @@ func (g *KeyPairGenerator) InitResources() error {
 	for _, keypair := range keypairList.Items {
 		stateGetter, err := importer.ResourceKeyPairStateGetter(&keypair)
 		if err != nil {
-			return nil
+			return err
 		}
 
 		g.Resources = append(g.Resources, buildResourceFormStateGetter(g.GetProviderName(), stateGetter))
