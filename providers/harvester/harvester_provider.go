@@ -60,6 +60,10 @@ func (p *HarvesterProvider) GetName() string {
 	return ProviderName
 }
 
+func (p *HarvesterProvider) GetSource() string {
+	return "harvester/harvester"
+}
+
 func (p *HarvesterProvider) InitService(serviceName string, verbose bool) error {
 	var isSupported bool
 	if _, isSupported = p.GetSupportedService()[serviceName]; !isSupported {
