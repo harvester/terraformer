@@ -19,6 +19,7 @@ const (
 	envNamespace   = "NAMESPACE"
 
 	ProviderName = "harvester"
+	SourceName   = "harvester/harvester"
 )
 
 type HarvesterProvider struct { //nolint
@@ -58,6 +59,10 @@ func (p *HarvesterProvider) Init(args []string) error {
 
 func (p *HarvesterProvider) GetName() string {
 	return ProviderName
+}
+
+func (p *HarvesterProvider) GetSource() string {
+	return SourceName
 }
 
 func (p *HarvesterProvider) InitService(serviceName string, verbose bool) error {
