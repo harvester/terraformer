@@ -21,7 +21,7 @@ jobs:
       - name: Build for harvester
         run: go run build/main.go harvester && mv terraformer-harvester terraformer-harvester-linux-amd64
 
-      - uses: "marvinpinto/action-automatic-releases@d68defdd11f9dcc7f52f35c1b7c236ee7513bcc1 # latest"
+      - uses: "marvinpinto/action-automatic-releases@d68defdd11f9dcc7f52f35c1b7c236ee7513bcc1" # latest
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: ${{ github.event.inputs.version }}
